@@ -23,8 +23,8 @@
           </p>
         </div>
         <div class="flex items-center justify-center space-x-4">
-          <img loading="lazy" style="width:20%" src="/images/apple-store.svg" alt="">
-          <img loading="lazy" style="width:20%" src="/images/google-play.svg" alt="">
+          <img loading="lazy" style="width:150px" src="/images/apple-store.svg" alt="">
+          <img loading="lazy" style="width:150px" src="/images/google-play.svg" alt="">
         </div>
       </div>
     </div>
