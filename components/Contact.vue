@@ -13,11 +13,11 @@
           Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
         </p>
         <div class="flex items-center justify-center mt-10">
-          <button class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden font-medium text-gray-900 rounded group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+          <a href="mailto:antwisam80@yahoo.com" class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden font-medium text-gray-900 rounded group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
             <span class="relative px-10 py-3 tracking-wide transition-all duration-75 ease-in bg-white dark:bg-gray-900 group-hover:bg-opacity-0">
               Get in touch
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

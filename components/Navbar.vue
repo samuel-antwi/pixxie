@@ -21,7 +21,7 @@ const mobileMenuOpen = ref(false)
           </h1>
         </NuxtLink>
       </div>
-      <div class="flex lg:hidden">
+      <div class="hidden">
         <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400" @click="mobileMenuOpen = true">
           <span class="sr-only">Open main menu</span>
           <Icon name="mdi:menu" class="w-6 h-6" aria-hidden="true" />

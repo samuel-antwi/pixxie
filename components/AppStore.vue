@@ -4,14 +4,15 @@
 
 <template>
   <div id="steps" class="px-6 py-10 text-gray-900 bg-white">
-    <div class="grid max-w-5xl grid-cols-3 mx-auto place-items-center">
-      <div class="col-span-1 ">
+    <div class="flex flex-col max-w-5xl mx-auto md:flex-row place-items-center">
+      <div class="order-last md:order-first ">
         <img
+          class="md:w-[302px] md:h-[537px] w-full h-auto"
           width="302"
           height="537" src="/images/steps/screenshot-home.webp" alt="Pixxie app on phone"
         >
       </div>
-      <div class="col-span-2 text-center ">
+      <div class="flex-1 text-center ">
         <div>
           <h1 class="mb-3 text-2xl font-bold tracking-wide">
             Find your favorite barber even faster on the app.

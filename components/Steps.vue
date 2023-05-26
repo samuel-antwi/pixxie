@@ -31,7 +31,7 @@ const steps = [
     <div class="max-w-6xl px-4 mx-auto ">
       <div>
         <h1 class="mb-8 text-3xl font-bold text-center capitalize md:text-5xl">
-          Three Easy Steps
+          Three Easy Steps...
         </h1>
         <div class="grid-cols-3 gap-10 md:grid">
           <div v-for="step in steps" :key="step.title" class="col-span-1 mb-3 border border-gray-300 rounded-lg card  h-[300px]">
@@ -54,10 +54,12 @@ const steps = [
 </template>
 
 <style scoped>
-  .card{
-    transition: all 0.3s ease-in-out;
-  }
-  .card:hover{
-    margin-top: -10px;
+  @media(min-width: 768px) {
+    .card{
+      transition: all 0.3s ease-in-out;
+    }
+    .card:hover{
+      margin-top: -10px;
+    }
   }
 </style>

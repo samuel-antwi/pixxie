@@ -77,8 +77,11 @@ const navigation = [
 <template>
   <footer class="text-gray-300 bg-[#10172A]">
     <div class="border-t border-white/10" />
-    <div class="px-6 py-12 mx-auto max-w-7xl md:flex md:items-center md:justify-between lg:px-8">
-      <div class="flex justify-center space-x-6 md:order-2">
+    <div class="flex items-center justify-between px-6 py-12 mx-auto max-w-7xl lg:px-8">
+      <p class="leading-5 text-center ">
+        &copy; 2023 Pixxie LTD.
+      </p>
+      <div class="flex justify-center space-x-4 ">
         <a href="/" class=" hover:text-gray-400">
           <span class="sr-only">Twitter</span>
           <Icon name="mdi:twitter" class="w-6 h-6 " />
@@ -91,11 +94,6 @@ const navigation = [
           <span class="sr-only">Facebook</span>
           <Icon name="mdi:facebook" class="w-6 h-6 " />
         </a>
-      </div>
-      <div class="mt-8 md:order-1 md:mt-0">
-        <p class="leading-5 text-center ">
-          &copy; 2023 Pixxie LTD.
-        </p>
       </div>
     </div>
   </footer>
