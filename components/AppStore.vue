@@ -10,6 +10,7 @@
           class="md:w-[302px] md:h-[537px] w-full h-auto"
           width="302"
           height="537" src="/images/steps/screenshot-home.webp" alt="Pixxie app on phone"
+          loading="lazy"
         >
       </div>
       <div class="flex-1 text-center ">
@@ -22,8 +23,8 @@
           </p>
         </div>
         <div class="flex items-center justify-center space-x-4">
-          <img style="width:20%" src="/images/apple-store.svg" alt="">
-          <img style="width:20%" src="/images/google-play.svg" alt="">
+          <img loading="lazy" style="width:20%" src="/images/apple-store.svg" alt="">
+          <img loading="lazy" style="width:20%" src="/images/google-play.svg" alt="">
         </div>
       </div>
     </div>
