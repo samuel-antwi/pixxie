@@ -31,6 +31,13 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .hero {
+    background-size: auto;
+    background-position: top;
+  }
+}
+
 .gradient-text {
     background-color: #ca4246;
 
