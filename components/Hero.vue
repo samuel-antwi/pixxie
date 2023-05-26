@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex flex-col items-center justify-center hero">
-    <div class="absolute inset-0 bg-black opacity-75 overlay" />
+    <div class="absolute inset-0 bg-black opacity-50 overlay" />
     <div class="z-40 max-w-xs py-32 mx-auto sm:py-48 lg:py-64">
       <h1 class="font-bold uppercase text-7xl gradient-text">
         Pixxie
