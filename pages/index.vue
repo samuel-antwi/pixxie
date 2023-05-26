@@ -1,8 +1,11 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'PIXXIE | Mobile Barbershop',
+  ogTitle: 'PIXXIE | Mobile Barbershop',
   description: 'The number one mobile barbershop in the UK',
-  image: '/images/kid-g.png',
+  ogDescription: 'The number one mobile barbershop in the UK',
+  ogImage: '/images/kid-g.png',
+  twitterCard: 'summary_large_image',
 })
 </script>
 
