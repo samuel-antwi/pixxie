@@ -6,10 +6,15 @@
   <div id="steps" class="px-6 py-10 text-gray-900 bg-white">
     <div class="flex flex-col max-w-5xl mx-auto md:flex-row place-items-center">
       <div class="order-last md:order-first ">
-        <img
+        <!-- <img
           class="md:w-[302px] md:h-[537px] w-full h-auto"
           width="302"
           height="537" src="/images/steps/screenshot-home.webp" alt="Pixxie app on phone"
+          loading="lazy"
+        > -->
+        <img
+          class="md:w-[302px]  h-auto"
+          src="/images/app-phone.gif" alt="Pixxie app on phone"
           loading="lazy"
         >
       </div>
