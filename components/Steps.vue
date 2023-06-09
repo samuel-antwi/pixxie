@@ -17,8 +17,8 @@ const steps = [
 
   },
   {
-    title: 'Track your stylist?',
-    description: 'Let your stylist reach you without the stress of queuing.',
+    title: 'Relax',
+    description: 'Avoid the queues. Receive regular updates while you wait for your service.',
     image: '/images/steps/screenshot-payment.webp',
     logo: 'mdi:map-marker',
 
