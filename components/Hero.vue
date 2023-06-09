@@ -1,10 +1,45 @@
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+
+const images = ref([
+  '/images/kid-g.png',
+  '/images/smiley-kid.png',
+  '/images/kid-girl.png',
+  '/images/new-kid.png',
+
+])
+const currentSlide = ref(0)
+
+function nextSlide() {
+  currentSlide.value = (currentSlide.value + 1) % images.value.length
+}
+
+function prevSlide() {
+  currentSlide.value = (currentSlide.value - 1 + images.value.length) % images.value.length
+}
+
+onMounted(() => {
+  setInterval(nextSlide, 7000)
+})
+</script>
+
 <template>
-  <div class="relative flex flex-col items-center justify-center hero">
-    <div class="absolute inset-0 bg-black opacity-50 overlay" />
-    <div class="z-40 max-w-xs py-32 mx-auto sm:py-48 lg:py-64">
-      <h1 class="font-bold uppercase text-7xl gradient-text">
-        Pixxie
-      </h1>
+  <div class=" carousel">
+    <div class="slides" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+      <div v-for="(image, index) in images" :key="index" class="relative slide">
+        <img :src="image" alt="Carousel slide">
+        <div class="absolute inset-0 bg-black opacity-50 overlay" />
+      </div>
+    </div>
+    <div class="controls">
+      <button class="control prev" @click="prevSlide">
+        <Icon name="mdi:chevron-left" />
+      </button>
+      <button class="control next" @click="nextSlide">
+        <Icon name="mdi:chevron-right" />
+      </button>
+    </div>
+    <div class="z-40 hero-content absolute max-w-xs  mx-auto">
       <div class="relative w-10 mx-auto mt-10">
         <a href="#steps" class="relative z-10 flex items-center justify-center w-12 h-12 rounded-full animate-pulse">
           <Icon name="mdi:chevron-down" class="w-8 h-8 text-gray-50" aria-hidden="true" />
@@ -15,90 +50,62 @@
   </div>
 </template>
 
-<style>
-.hero{
-  background-image: url('/images/kid-g.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+<style scoped>
+.carousel {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 
 }
 .overlay{
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
-@media only screen and (max-width: 767px) {
-  .hero {
-    background-size: auto;
-    background-position: top;
-  }
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
 }
 
-.gradient-text {
-    background-color: #ca4246;
+.control {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
 
-    /* Create the gradient. */
-    background-image: linear-gradient(
-      45deg,
-      #ca4246 16.666%,
-      #e16541 16.666%,
-      #e16541 33.333%,
-      #f18f43 33.333%,
-      #f18f43 50%,
-      #8b9862 50%,
-      #8b9862 66.666%,
-      #476098 66.666%,
-      #476098 83.333%,
-      #a7489b 83.333%
-    );
+.control:hover {
+  opacity: 0.8;
+}
 
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* Animate the text when loading the element. */
-    /* This animates it on page load and when hovering out. */
-    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
-  }
-
-  .gradient-text:hover {
-    animation: rainbow-text-simple-animation 0.5s ease-in forwards;
-  }
-
-  /* Move the background and make it smaller. */
-  /* Animation shown when entering the page and after the hover animation. */
-  @keyframes rainbow-text-simple-animation-rev {
-    0% {
-      background-size: 650%;
-    }
-    40% {
-      background-size: 650%;
-    }
-    100% {
-      background-size: 100%;
-    }
-  }
-
-  /* Move the background and make it larger. */
-  /* Animation shown when hovering over the text. */
-  @keyframes rainbow-text-simple-animation {
-    0% {
-      background-size: 100%;
-    }
-    80% {
-      background-size: 650%;
-    }
-    100% {
-      background-size: 650%;
-    }
-  }
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>

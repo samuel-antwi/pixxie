@@ -3,22 +3,22 @@ const name = ref('World')
 
 const steps = [
   {
-    title: 'Book an appointment',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Select your service ',
+    description: 'Request a option that is suitable for your kids based on their needs. Any time and on any day of the year.',
     image: '/images/steps/screenshot-home.webp',
     logo: 'mdi:calendar-clock',
 
   },
   {
-    title: 'Make a payment',
-    description: ' lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Confirm your booking',
+    description: ' You will receive the confirmation from your trusted barber/stylist.',
     image: '/images/steps/screenshot-booking.webp',
     logo: 'mdi:credit-card-outline',
 
   },
   {
-    title: 'Track your barber',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    title: 'Track your stylist?',
+    description: 'Let your stylist reach you without the stress of queuing.',
     image: '/images/steps/screenshot-payment.webp',
     logo: 'mdi:map-marker',
 
@@ -54,6 +54,11 @@ const steps = [
 </template>
 
 <style scoped>
+.steps{
+
+  background-color: rgb(157 23 77)
+
+  }
   @media(min-width: 768px) {
     .card{
       transition: all 0.3s ease-in-out;
